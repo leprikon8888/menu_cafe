@@ -6,7 +6,7 @@ from order import Order
 from discount import Discount
 from regular_discount import RegularDiscount
 from silver_discount import SilverDiscount
-from  gold_discount import GoldDiscount
+from gold_discount import GoldDiscount
 from client import Client
 
 logger = logging.getLogger('order_processing')
