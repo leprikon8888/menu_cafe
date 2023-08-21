@@ -51,6 +51,7 @@ try:
 
     gld = GoldDiscount()
 
+
     sasha  = Client('sasha', gld)
     sasha_order = Order()
     sasha_order.add_item(a,3)
