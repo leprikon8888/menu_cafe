@@ -8,10 +8,8 @@ from discount import *
 
 if __name__ == '__main__':
 
-
-    logger = logging.getLogger ('order_processing')
+    logger = logging.getLogger('order_processing')
     logger.setLevel(logging.DEBUG)
-
 
     file_handler = logging.FileHandler('log_o.log')
     file_handler.setLevel(logging.INFO)
@@ -23,15 +21,14 @@ if __name__ == '__main__':
     file_handler.setFormatter(formatter)
     console_handler.setFormatter(formatter)
 
-
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
     try:
-        a = Dish('kola', 'drink', 50,)
+        a = Dish('kola', 'drink', 50, )
         b = Dish('apple', 'frukt', 95)
         c = Dish('soda', 'drink', 30)
-        d = Dish('kiwi', 'ice', 40)
+        d = Dish('kiwi', 'frukt', 70)
 
         breakfast = MenuCategory()
         breakfast.add_dishes(d)
@@ -50,16 +47,15 @@ if __name__ == '__main__':
 
         gld = GoldDiscount()
 
-
-        sasha  = Client('sasha', gld)
+        sasha = Client('sasha', gld)
         sasha_order = Order()
-        sasha_order.add_item(a,3)
-        sasha_order.add_item(c,8)
+        sasha_order.add_item(a, 3)
+        sasha_order.add_item(c, 8)
         sasha_order.add_item(d)
-        print(sasha.get_total_price(sasha_order))
+
     except TypeError as error:
         print('Error')
     except:
         print('Errors')
 
-    print(sasha, sasha_order, sasha.get_total_price(sasha_order) )
+    print(sasha, sasha_order, sasha.get_total_price(sasha_order))

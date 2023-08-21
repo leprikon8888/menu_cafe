@@ -14,7 +14,7 @@ class Order:
             logger.info(f'Problem - Type error: not int or float')
             raise TypeError('Error in quantity of Dish')
         if quantity<=0:
-            logger.info(f'Problem - (price <= 0): {name}; {description}')
+            logger.info(f'Problem - (quantity <= 0): {dish}; {quantity}')
             raise ValueError('Quantity must be > 0. But less or equal got.')
         self.order_dishes.append(dish)
         self.quantity.append(quantity)
@@ -22,12 +22,12 @@ class Order:
     def total_summ(self):
         result = 0
         for x, y in zip(self.order_dishes, self.quantity):
-            result+= x.price * y
+            result += x.price * y
         return result
 
     def __str__(self):
-        res = ''
+        res = ""
         for x, y in zip(self.order_dishes, self.quantity):
-            res+= f'{x} x {y} = {x.price*y} $\n'
-        res+= f'Total = {self.total_summ()} $'
+            res += f'{x} x {y} = {x.price*y} $\n'
+        res += f'Total = {self.total_summ()} $'
         return res
