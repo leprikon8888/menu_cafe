@@ -55,7 +55,8 @@ if __name__ == '__main__':
 
     except TypeError as error:
         print('Error')
-    except:
+
+    except ValueError as error:
         print('Errors')
 
     print(sasha, sasha_order, sasha.get_total_price(sasha_order))
