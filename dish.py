@@ -1,3 +1,4 @@
+
 class Dish:
     def __init__(self, name, description, price):
         if price <= 0:

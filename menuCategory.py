@@ -1,4 +1,5 @@
 from dish import Dish
+
 class MenuCategory:
     def __init__(self):
         self.dishes = []

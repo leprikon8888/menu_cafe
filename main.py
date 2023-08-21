@@ -9,7 +9,7 @@ from discount import *
 if __name__ == '__main__':
 
 
-    logger = logging.getLogger('order_processing')
+    logger = logging.getLogger ('order_processing')
     logger.setLevel(logging.DEBUG)
 
 
@@ -28,14 +28,14 @@ if __name__ == '__main__':
     logger.addHandler(console_handler)
 
     try:
-        a = Dish('kola', 'drink', 10,)
+        a = Dish('kola', 'drink', 50,)
         b = Dish('apple', 'frukt', 95)
         c = Dish('soda', 'drink', 30)
         d = Dish('kiwi', 'ice', 40)
 
         breakfast = MenuCategory()
         breakfast.add_dishes(d)
-        breakfast.add_dishes(c)
+        breakfast.add_dishes(a)
 
         lunch = MenuCategory()
         lunch.add_dishes(b)
