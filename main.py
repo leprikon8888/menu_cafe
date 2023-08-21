@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     try:
         a = Dish('kola', 'drink', 50, )
-        b = Dish('apple', 'frukt', 95)
+        b = Dish('apple', 'frukt', 40)
         c = Dish('soda', 'drink', 30)
         d = Dish('kiwi', 'frukt', 70)
 
