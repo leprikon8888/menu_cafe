@@ -13,7 +13,7 @@ logger = logging.getLogger('order_processing')
 logger.setLevel(logging.DEBUG)
 
 
-file_handler = logging.FileHandler('log_ord.log')
+file_handler = logging.FileHandler('log_o.log')
 file_handler.setLevel(logging.INFO)
 
 console_handler = logging.StreamHandler()
@@ -28,8 +28,7 @@ logger.addHandler(file_handler)
 logger.addHandler(console_handler)
 
 try:
-
-    a = Dish('kola', 'drink', 10)
+    a = Dish('kola', 'drink', 10,)
     b = Dish('apple', 'frukt', 95)
     c = Dish('soda', 'drink', 30)
     d = Dish('kiwi', 'ice', 40)
@@ -58,11 +57,9 @@ try:
     sasha_order.add_item(c,8)
     sasha_order.add_item(d)
     print(sasha.get_total_price(sasha_order))
-except MyNewError as error:
-        print (error)
 except TypeError as error:
-        print(error)
+    print(error)
 except:
-        print('Error')
+    print('Error')
 
 print(sasha, sasha_order, sasha.get_total_price(sasha_order) )

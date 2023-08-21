@@ -2,7 +2,7 @@ from discount import Discount
 from order import Order
 
 class Client:
-    def __init__(self, name, discount : Discount):
+    def __init__(self, name, discount: Discount):
         if not isinstance(discount, Discount):
             logger.info(f'Problem - Type error: not Discount')
             raise TypeError('Error in Discount datatype')
