@@ -60,7 +60,9 @@ if __name__ == '__main__':
     except ValueError as error:
         print('Errors')
 
-    print(sasha, sasha_order, sasha.get_total_price(sasha_order))
+    # print(sasha, sasha_order, sasha.get_total_price(sasha_order))
+    for x in sasha_order:
+        print (x)
     print('*********')
-    for i in breakfast:
+    for i in menu:
         print(i)
