@@ -49,9 +49,10 @@ if __name__ == '__main__':
 
         sasha = Client('sasha', gld)
         sasha_order = Order()
-        sasha_order.add_item(a, 3)
+
         sasha_order.add_item(c, 8)
         sasha_order.add_item(d)
+        sasha_order.add_item(a, 3)
 
     except TypeError as error:
         print('Error')
@@ -60,3 +61,6 @@ if __name__ == '__main__':
         print('Errors')
 
     print(sasha, sasha_order, sasha.get_total_price(sasha_order))
+    print('*********')
+    for i in breakfast:
+        print(i)
